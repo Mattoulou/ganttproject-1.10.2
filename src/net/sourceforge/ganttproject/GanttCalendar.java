@@ -171,7 +171,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 
 	/** Return the difference (in day) between two date */
 	
-	// TODO: method should only have one return statement 
+
 	public int diff( GanttCalendar d )
 	{
 		int res=0;
@@ -243,7 +243,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	
 	/** Is the date equals to when */
 	
-	
+	//FIXME: equals(Object) is not defined in class GanttCalendar  
 	public boolean equals (GanttCalendar when)
 	{
 		return getYear() == when.getYear()
