@@ -87,6 +87,8 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	  }
 
 	/** Return a clone of the calendar */
+	
+
 	public GanttCalendar Clone()
 	{
 		GanttCalendar clone = new GanttCalendar(getYear(), getMonth(), getDay());
@@ -168,6 +170,8 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	}
 
 	/** Return the difference (in day) between two date */
+	
+	// TODO: method should only have one return statement 
 	public int diff( GanttCalendar d )
 	{
 		int res=0;
@@ -238,6 +242,8 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	
 	
 	/** Is the date equals to when */
+	
+	
 	public boolean equals (GanttCalendar when)
 	{
 		return getYear() == when.getYear()
