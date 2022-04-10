@@ -138,8 +138,7 @@ public class GanttTaskRelationship {
            successorTaskID   == compareRel.successorTaskID;
   }
 
-  //TODO : Add throws CloneNotSupportedException
-  public Object clone(){
+  public Object clone()throws CloneNotSupportedException{
     GanttTaskRelationship copyRel=new GanttTaskRelationship(myTaskManager);
     copyRel.relationshipType=relationshipType;
     copyRel.predecessorTaskID=predecessorTaskID;
