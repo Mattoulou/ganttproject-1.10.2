@@ -50,7 +50,8 @@ public class SearchKey implements Comparable {
         }
         return result;
     }
-
+    
+// TODO: equals () method does not check for null argument
     public boolean equals(Object obj) {
         SearchKey rvalue = (SearchKey) obj;
         return myFirstTaskID==rvalue.myFirstTaskID && myType==rvalue.myType && mySecondTaskID==rvalue.mySecondTaskID;

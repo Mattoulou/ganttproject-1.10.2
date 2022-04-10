@@ -1186,6 +1186,8 @@ public class ResourceLoadGraphicArea extends JPanel {
 	private int rowCount=0;
 	
 	/** Print the list of tasks */
+	
+	// TODO: check for oddness that won't work for negative numbers
 	private void printResources(Graphics g){
 		g.setColor(Color.white);
 		g.fillRect(0, 0, getWidth(), getHeight());
