@@ -66,6 +66,8 @@ public class GanttTXTOpen {
 	}
 	
 	/** Load tasks list from a text file. */
+	
+	// FIXME: Dereference of the result of readLine() without nullcheck
 	public boolean load(File f)
 	{		
 		try {
