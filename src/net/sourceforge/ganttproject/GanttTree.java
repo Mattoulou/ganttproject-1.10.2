@@ -220,7 +220,7 @@ public class GanttTree
 
     //A listener on mouse click (menu)
     MouseListener ml = new MouseAdapter() {
-    	//FIXME: this method is missing an override annotation
+    	@Override
       public void mouseClicked(MouseEvent e) {
         int selRow = tree.getRowForLocation(e.getX(), e.getY());
         TreePath selPath = tree.getPathForLocation(e.getX(), e.getY());
