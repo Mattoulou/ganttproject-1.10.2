@@ -1834,6 +1834,8 @@ public class GanttProject
 	}
 	
 	/** Import function. */
+	
+	//FIXME: Dead store to local variable allocationHandler
 	public void importcbk()
 	{
 	
