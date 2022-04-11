@@ -1834,8 +1834,6 @@ public class GanttProject
 	}
 	
 	/** Import function. */
-	
-	//FIXME: Dead store to local variable allocationHandler
 	public void importcbk()
 	{
 	
@@ -1904,8 +1902,6 @@ public class GanttProject
 						hrManager, roleManager);
 					DependencyTagHandler dependencyHandler = new DependencyTagHandler(
 						opener.getContext(), getTaskManager());
-					AllocationTagHandler allocationHandler = new AllocationTagHandler(
-						hrManager, getTaskManager());
 					opener.addTagHandler(opener.getDefaultTagHandler());
 					//opener.addTagHandler(resourceHandler);
 					//opener.addTagHandler(dependencyHandler);
