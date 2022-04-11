@@ -67,35 +67,29 @@ public class GanttTXTOpen {
 	
 	/** Load tasks list from a text file. */
 	
-	// FIXME: Dereference of the result of readLine() without nullcheck
-	public boolean load(File f)
-	{		
+	public boolean load(File f){
+		
+		BufferedReader br = null;
 		try {
 			//Open a stream
-			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(f)));
-			
-			while(br.ready())
+			 br = new BufferedReader(new InputStreamReader(new FileInputStream(f)));
+			 String line = null;
+			while((line = br.readLine())!= null)
 			{
-				//Read each lines
-				String sTaskName = br.readLine();
-				
-				//The test is used to skip the white line (with no text)
-				if(!sTaskName.equals(""))
-				{
-					//Create the task
+				//Create the task
 					GanttTask task = myTaskManager.createTask();
 					task.setColor(area.getTaskColor());
-					task.setName(sTaskName);
+					task.setName(line);
 					task.setLength(1);
 					myTaskManager.registerTask(task);
 					treePanel.addObject(task, null);
 				}
 			}
 						
-		} catch (Exception e)
+		catch (Exception e)
 		{
-			return false;
+			System.out.println("Error Message");
 		}
-		return true;
+	return true;
 	}
 }
