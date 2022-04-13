@@ -178,7 +178,7 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 		GanttCalendar d1;
 		GanttCalendar d2;
 		
-		if(this.compareTo(d)==0) return res;
+		if(this.compareTo(d)==0) res = 0;
 		
 		else if(compareTo(d)<0) {
 			d1 = this.Clone();
