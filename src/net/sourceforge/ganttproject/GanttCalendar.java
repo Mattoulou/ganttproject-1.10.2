@@ -242,13 +242,18 @@ public class GanttCalendar extends GregorianCalendar implements Serializable, Co
 	
 	
 	/** Is the date equals to when */
-	
-	//FIXME: equals(Object) is not defined in class GanttCalendar  
 	public boolean equals (GanttCalendar when)
 	{
 		return getYear() == when.getYear()
         && getMonth() == when.getMonth()
-        && getDay() == when.getDay()		;
+        && getDay() == when.getDay();
+	}
+	
+	public boolean equals (Object when)
+	{
+		return getYear() == ((Date) when).getYear()
+        && getMonth() == ((Date) when).getMonth()
+        && getDay() == ((Date) when).getDay();
 	}
 	
 	/** Change date to next month. */
